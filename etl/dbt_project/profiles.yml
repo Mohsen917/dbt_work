@@ -1,0 +1,9 @@
+
+my_dbt_profile:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: 'my_db.duckdb' # local duckdb file
+      extensions: 
+        - parquet  # if needed

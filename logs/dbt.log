@@ -1,0 +1,56 @@
+[0m15:54:25.874736 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F4042ACA30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F4053FC250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F4053FC070>]}
+
+
+============================== 15:54:25.880253 | b817134a-53d3-4520-8f36-87bb674943bd ==============================
+[0m15:54:25.880253 [info ] [MainThread]: Running with dbt=1.11.0-rc1
+[0m15:54:25.881255 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'invocation_command': 'dbt init', 'profiles_dir': 'C:\\Users\\DELL\\.dbt', 'target_path': 'None', 'no_print': 'None', 'warn_error': 'None', 'indirect_selection': 'eager', 'partial_parse': 'True', 'log_path': 'logs', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'use_experimental_parser': 'False', 'version_check': 'True', 'introspect': 'True', 'quiet': 'False', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'log_format': 'default', 'use_colors': 'True', 'cache_selected_only': 'False', 'write_json': 'True'}
+[0m15:54:45.036824 [debug] [MainThread]: Starter project path: C:\Users\DELL\anaconda3\envs\pytorch\lib\site-packages\dbt\include\starter_project
+[0m15:54:45.078903 [info ] [MainThread]: 
+Your new dbt project "gitwork" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m15:54:45.080902 [info ] [MainThread]: Setting up your profile.
+[0m15:55:30.596326 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m15:55:30.597367 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m15:55:30.597367 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m15:55:40.900924 [error] [MainThread]: Encountered an error:
+
+[0m15:55:40.913064 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\DELL\anaconda3\envs\pytorch\lib\site-packages\dbt\cli\requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+  File "C:\Users\DELL\anaconda3\envs\pytorch\lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\DELL\anaconda3\envs\pytorch\lib\site-packages\dbt\cli\main.py", line 483, in init
+    results = task.run()
+  File "C:\Users\DELL\anaconda3\envs\pytorch\lib\site-packages\dbt\task\init.py", line 346, in run
+    self.setup_profile(profile_name)
+  File "C:\Users\DELL\anaconda3\envs\pytorch\lib\site-packages\dbt\task\init.py", line 262, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "C:\Users\DELL\anaconda3\envs\pytorch\lib\site-packages\dbt\task\init.py", line 179, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "C:\Users\DELL\anaconda3\envs\pytorch\lib\site-packages\dbt\task\init.py", line 163, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "C:\Users\DELL\anaconda3\envs\pytorch\lib\site-packages\dbt\task\init.py", line 129, in generate_target_from_input
+    target[key] = click.prompt(
+  File "C:\Users\DELL\anaconda3\envs\pytorch\lib\site-packages\click\termui.py", line 171, in prompt
+    value = prompt_func(prompt)
+  File "C:\Users\DELL\anaconda3\envs\pytorch\lib\site-packages\click\termui.py", line 154, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m15:55:40.915069 [debug] [MainThread]: Command `dbt init` failed at 15:55:40.915069 after 75.21 seconds
+[0m15:55:40.916590 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F4042ACA30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F42616B730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F42616B5B0>]}
+[0m15:55:40.917613 [debug] [MainThread]: Flushing usage events
+[0m15:55:41.695307 [debug] [MainThread]: An error was encountered while trying to flush usage events
